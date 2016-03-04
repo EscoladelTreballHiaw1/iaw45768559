@@ -182,38 +182,7 @@ public class Bicycle {
     public void stop() {
         this.v = 0;
     }
-    public boolean slowDown() {
-        boolean canChangeGear = true;
-        if (frontSprocket == 1 && rearSprocket == nRearSprockets){
-            canChangeGear= false;
-        }else if (frontSprocket > 1) {
-            for (int i=rearSprocket; i < nRearSprockets - 1; i++){
-                setRearSprocket(rearSprocket + 1);
-            }
-            setFrontSprocket(frontSprocket - 1);
-            setRearSprocket(rearSprocket - 1);
-        } else {
-            for (int i=rearSprocket; i < nRearSprockets; i++){
-                setRearSprocket(rearSprocket + 1);
-            }
-        }
-        return canChangeGear;
-    }
-    public boolean speedUp() {
-        boolean canChangeGear = true;
-        if (frontSprocket == nFrontSprockets && rearSprocket ==1 ){
-            canChangeGear= false;
-        } else if (frontSprocket < 1) {
-            for (int i=rearSprocket; i > 2; i--){
-                setRearSprocket(rearSprocket - 1);
-            }
-            setFrontSprocket(frontSprocket + 1);
-            setRearSprocket(rearSprocket + 1);
-        } else {
-            for (int i=rearSprocket; i > 1; i--){
-                setRearSprocket(rearSprocket - 1);
-            }
-        }
-        return canChangeGear;
+    public void slowDown() {
+    
     }
 }
