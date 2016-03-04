@@ -58,7 +58,7 @@ public class Bicycle {
     public Bicycle(int nFrontSprockets, int nRearSprockets, double v) {
         this.model = "Mountain bike";
         this.nFrontSprockets = nFrontSprockets;
-        this.nRearSprockets = nRearSprockets;
+        this.nRearSprockets = nRearSprockets > 3 ? nRearSprockets : 3;
         this.frontSprocket = nFrontSprockets;
         this.rearSprocket = 1;
         this.v = v;
@@ -79,7 +79,7 @@ public class Bicycle {
         this.frontSprocket = frontSprocket;
         this.rearSprocket = rearSprocket;
         this.nFrontSprockets = nFrontSprockets;
-        this.nRearSprockets = nRearSprockets;
+        this.nRearSprockets = nRearSprockets > 3 ? nRearSprockets : 3;
         this.v = v;
     }
 
